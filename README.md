@@ -7,6 +7,7 @@ Afstudeerstage test opdracht.
 Clone repo
 Run : 
 ```
+npm install .
 npm run start in repo folder.
 ```
 
