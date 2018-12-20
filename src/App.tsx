@@ -1,12 +1,16 @@
 import * as React from 'react';
-import './App.css';
+
+import 'src/css/materialize.css';
+import 'src/js/materialize.js';
 
 import FloridayData from './components/FloridayData';
+import Header from './components/Header';
 
-class App extends React.Component {
+class App extends React.Component { 
   public render() {
     return (
-      <div className = " light-green darken-2 ">
+      <div>
+	  	<Header/>
 	  	<div className= "container">
 	  		<FloridayData/>
 		  </div>

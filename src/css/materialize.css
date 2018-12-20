@@ -3,6 +3,12 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+.filterCheckbox {
+	padding-right: 1rem;
+}
+.padding-left {
+	padding-left:2rem;
+}
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -2162,7 +2168,7 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
-  margin: 0;
+ 	margin: 0;
 }
 
 /**
@@ -4270,8 +4276,9 @@ table span.badge {
 }
 
 nav {
-  color: #fff;
-  background-color: #ee6e73;
+  color: #000;
+  background-color: #c3cf21;
+  margin-bottom: .75rem;
   width: 100%;
   height: 56px;
   line-height: 56px;
@@ -4330,10 +4337,11 @@ nav .sidenav-trigger i {
 
 nav .brand-logo {
   position: absolute;
-  color: #fff;
+  color: #000;
   display: inline-block;
+  font-weight: 300;
   font-size: 2.1rem;
-  padding: 0;
+  padding-left: 2rem;
 }
 
 nav .brand-logo.center {
@@ -4399,7 +4407,7 @@ nav ul a {
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
   font-size: 1rem;
-  color: #fff;
+  color: #000;
   display: block;
   padding: 0 15px;
   cursor: pointer;
@@ -4490,7 +4498,7 @@ a {
 
 html {
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI" , Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -4500,7 +4508,16 @@ html {
     font-size: 14px;
   }
 }
-
+@media only screen and (max-width: 1200px){
+	.row .col.s4 {
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 600px){
+	.row .col.s4 {
+		width: 100%;
+	}
+}
 @media only screen and (min-width: 992px) {
   html {
     font-size: 14.5px;
@@ -4764,6 +4781,7 @@ small {
 
 .card.small, .card.medium, .card.large {
   position: relative;
+  background-color: #c3cf21;
 }
 
 .card.small .card-image, .card.medium .card-image, .card.large .card-image {
@@ -4792,7 +4810,7 @@ small {
 }
 
 .card.medium {
-  height: 400px;
+  height: 460px;
 }
 
 .card.large {
@@ -4928,7 +4946,7 @@ small {
 .card .card-reveal {
   padding: 24px;
   position: absolute;
-  background-color: #fff;
+  background-color: #c3cf21;
   width: 100%;
   overflow-y: auto;
   left: 0;
@@ -7137,9 +7155,9 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
 
 /* Select Field
    ========================================================================== */
-select {
+/*select {
   display: none;
-}
+} */
 
 select.browser-default {
   display: block;
@@ -7391,7 +7409,10 @@ input[type=range] + .thumb.active .value {
   margin-top: 8px;
   font-size: 10px;
 }
-
+input[type=checkbox]
+{
+  -webkit-appearance: checkbox;
+}
 input[type=range] {
   -webkit-appearance: none;
 }
